@@ -18,7 +18,7 @@ resource "google_compute_instance" "default" {
  project = "${var.projectId}"
  zone = "us-central1-b"
  name = "tf-compute-1"
- machine_type = "g1-small"
+  machine_type = "f1-micro"
  allow_stopping_for_update = true
  boot_disk {
    initialize_params {
