@@ -8,7 +8,7 @@ are modified by the service when it parses Recommender recommendations and finds
 recommendations for resources managed by Terraform.
 
 
-## How to use this example
+## Example for Anthos Demo
 
 Use the [tutorial](https://cloud.google.com/recommender/docs/tutorial-iac) to understand how to configure
 your Google Cloud Platform projects to use this pipeline.
