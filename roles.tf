@@ -20,9 +20,18 @@ resource "google_service_account" "mysa" {
   display_name = "${var.serviceAccountDisplayName}"
 }
 
-resource "google_project_iam_binding" "mysabinding" {
+/* resource "google_project_iam_binding" "mysabinding" {
   project = "${var.projectId}"
   role    = "roles/editor"
+
+  members = [
+    "serviceAccount:${google_service_account.mysa.account_id}@${var.projectId}.iam.gserviceaccount.com"
+  ]
+} */
+
+resource "google_project_iam_binding" "mysabinding" {
+  project = "${var.projectId}"
+  role    = "roles/viewer"
 
   members = [
     "serviceAccount:${google_service_account.mysa.account_id}@${var.projectId}.iam.gserviceaccount.com"
